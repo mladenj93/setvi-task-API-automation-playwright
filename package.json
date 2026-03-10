@@ -1,0 +1,46 @@
+{
+  "name": "setvi-rfq-api-automation",
+  "version": "1.0.0",
+  "description": "Playwright API automation framework for Setvi AI-powered RFQ endpoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "test:upload-freetext": "playwright test src/tests/rfq/upload-free-text",
+    "test:upload-url": "playwright test src/tests/rfq/upload-url-html",
+    "test:negative": "playwright test --grep @negative",
+    "test:positive": "playwright test --grep @positive",
+    "test:high": "playwright test --grep @severity-high",
+    "test:medium": "playwright test --grep @severity-medium",
+    "test:low": "playwright test --grep @severity-low",
+    "test:priority-high": "playwright test --grep @priority-high",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint src playwright.config.ts --fix",
+    "lint:check": "eslint src playwright.config.ts"
+  },
+  "keywords": [
+    "playwright",
+    "api-testing",
+    "automation",
+    "rfq"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "dotenv": "^16.3.1",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.8.1",
+    "typescript": "^5.3.0"
+  }
+}
